@@ -3,7 +3,21 @@ This is a eazy Libray manager.
 ### 使用方法
 - 1 创建数据库
   - 1.1 在本机创建MySQL数据库，命名为mysite4;
-  - 1.2 迁移数据　在mysite4目录下 
+  - 1.2 在mysite4/mysite4/setting.py 下的DATABASE修改
+  ```python3
+  DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mysite4',
+        'USER':'你的MySQL用户名',
+        'PASSWORD':'你的MySQL密码',
+        'HOST' :'127.0.0.1',
+        'PORT': '3306',
+    }
+  }
+  ```
+    
+  - 1.3 迁移数据　在mysite4目录下 
   ```python
   python3 manage.py makemigrations
   python3 manage.py migrate
